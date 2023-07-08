@@ -1,9 +1,55 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'top/index.css' %}">
+<link rel="stylesheet" href="{% static 'components/table.css' %}">
+{% endblock extracss%}
 
 {% block title %}
 top/index.html
 {% endblock title %}
 
 {% block main %}
-<h1>hello world :^)</h1>
+<div class="main">
+  <h1>hello world :^)</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>spell</th>
+        <th>meaning</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      {% for word in words %}
+        <tr>
+          <td>{{ word.spell }}</td>
+          <td>{{ word.meaning }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th>word</th>
+        <th>sentence</th>
+        <th>translation</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      {% for ex in examples %}
+        <tr>
+          <td>{{ ex.word }}</td>
+          <td>{{ ex.sentence }}</td>
+          <td>{{ ex.translation }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock main%}
