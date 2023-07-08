@@ -5,4 +5,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # custom apps
     path("", include("top.urls")),
+    path("registers/", include("registers.urls")),
 ]

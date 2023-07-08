@@ -21,6 +21,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # custom app
     "top.apps.TopConfig",
+    "words.apps.WordsConfig",
+    "examples.apps.ExamplesConfig",
+    "registers.apps.RegistersConfig",
     # third app
 ]
 
