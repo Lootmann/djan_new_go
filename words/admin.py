@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from words.models import WordModel
+
+
+@admin.register(WordModel)
+class WordAdmin(admin.ModelAdmin):
+    pass
