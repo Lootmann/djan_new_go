@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'components/header.css' %}">
+{% endblock extracss %}
+
+<header>
+  <ul>
+    <li><a href="{% url 'top:index' %}">Top</a></li>
+    <li>hoge</li>
+    <li>hoge</li>
+    <li>hoge</li>
+  </ul>
+</header>
