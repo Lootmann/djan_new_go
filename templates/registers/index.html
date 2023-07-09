@@ -28,7 +28,15 @@ registers/index.html
   </div>
 
   <div>
-    {{ example_form.as_p }}
+    <div>
+      <label for="sentence">{{ example_form.sentence.label }}</label>
+      {{ example_form.sentence }}
+    </div>
+    
+    <div>
+      <label for="translation">{{ example_form.translation.label }}</label>
+      {{ example_form.translation }}
+    </div>
   </div>
   
   <button type="submit">Registers</button>
