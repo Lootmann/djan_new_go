@@ -9,4 +9,4 @@ class ExampleModel(models.Model):
     word = models.ForeignKey(WordModel, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f"[{self.word.spell}] {self.sentence}"
+        return f"{self.sentence}"
