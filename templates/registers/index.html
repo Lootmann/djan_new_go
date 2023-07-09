@@ -7,11 +7,29 @@ registers/index.html
 {% block main %}
 <h1>registers/index.html</h1>
 
-<form action="" method="post">
+<form method="post">
   {% csrf_token %}
   
-  {{ word_form.as_p }}
-  {{ example_form.as_p }}
+  <div>
+    {% if word_form.errors %}
+      <p class="form-errors">{{ word_form.spell.errors }}</p>
+    {% endif %}
+
+    <div>
+      <label for="spell">{{ word_form.spell.label}}</label>
+      {{ word_form.spell }}
+    </div>
+
+    <div>
+      <label for="meaning">{{ word_form.meaning.label}}</label>
+      {{ word_form.meaning }}
+    </div>
+    
+  </div>
+
+  <div>
+    {{ example_form.as_p }}
+  </div>
   
   <button type="submit">Registers</button>
 </form>
