@@ -5,4 +5,5 @@ from words.models import WordModel
 
 @admin.register(WordModel)
 class WordAdmin(admin.ModelAdmin):
-    pass
+    list_display = ("id", "spell", "meaning")
+    ordering = ["spell"]
