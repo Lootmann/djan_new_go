@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'words/words_list.css' %}">
+{% endblock extracss%}
+
+{% block title %}
+words/words_list.html
+{% endblock title %}
+
+{% block main %}
+<h1>words/index.html</h1>
+
+<ul class="words-list">
+  {% for word in words %}
+  <li>
+    <u class="word">{{ word.spell }} - {{ word.meaning }}</u>
+
+    <ul>
+      {% for ex in word.examplemodel_set.all %}
+      <li>{{ex}}</li>
+      {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock main %}

@@ -1,0 +1,21 @@
+.words-list {
+  border: 2px solid black;
+  padding-left: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word {
+  font-size: 20px;
+  padding-bottom: 2px;
+}
+
+.words-list ul {
+  margin-left: 10px;
+}
+
+.words-list li {
+  margin-left: 10px;
+}

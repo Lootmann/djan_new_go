@@ -6,4 +6,5 @@ urlpatterns = [
     # custom apps
     path("", include("top.urls")),
     path("registers/", include("registers.urls")),
+    path("words/", include("words.urls")),
 ]
