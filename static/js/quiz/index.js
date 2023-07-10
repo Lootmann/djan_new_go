@@ -13,6 +13,6 @@ document.addEventListener("keydown", (e) => {
   switch (key) {
     case "ArrowRight":
       window.location.href = "";
-      break;
+      return;
   }
 });
