@@ -1,15 +1,15 @@
-header {
+.main-header {
   background-color: darkgrey;
 }
 
-header ul {
+.main-header ul {
   padding: 20px;
 
   display: flex;
   gap: 10px;
 }
 
-header ul li {
+.main-header ul li {
   list-style-type: none;
   border: 2px solid black;
   font-size: 25px;
